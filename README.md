@@ -1,4 +1,4 @@
-# 🚀 Kubernetes Spark Cluster with Helm
+# 🚀 Kubernetes Spark Cluster with Helm ☸
 
 This project sets up a scalable Apache Spark cluster on Kubernetes using Helm. It includes configurations for Minikube and Kubernetes, as well as running Spark jobs.
 

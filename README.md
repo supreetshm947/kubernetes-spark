@@ -6,7 +6,7 @@ This project sets up a scalable Apache Spark cluster on Kubernetes using Helm. I
 
 ## 🛠️ Setup Instructions
 
-### 🔧 Install Minikube and Kubectl
+### 1. 🔧 Install Minikube and Kubectl
 
 Use the provided Makefile to install Minikube and Kubectl:
 
@@ -15,7 +15,7 @@ make install_minikube
 make install_kubectl
 ```
 
-### 🚦 Start Minikube
+### 2. 🚦 Start Minikube
 
 Start your Minikube cluster:
 
@@ -29,7 +29,7 @@ You can also access the Minikube dashboard to monitor resources:
 make minikube_dashboard
 ```
 
-### 🛠️ Install Helm
+### 3. 🛠️ Install Helm
 
 Install Helm using the Makefile:
 

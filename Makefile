@@ -1,8 +1,7 @@
 install_minikube:
 	echo "Installing Minikube"
 	curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-	sudo install minikube-linux-amd64 /usr/local/bin/minikube
-	sudo rm -f minikube-linux-amd64
+	sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
 install_kubectl:
 	echo "Installing Kubectl"
 	sudo apt-get install -y apt-transport-https ca-certificates
@@ -16,9 +15,7 @@ install_kubectl:
 setup_minikube:
 	install_minikube install_kubectl
 start_minikube:
-	minikube start --driver=docker
-	kubectl apply -f deployment.yaml
-	kubectl apply -f service.yaml
+	minikube start
 
 minikube_dashboard:
 	minikube dashboard
@@ -27,6 +24,7 @@ install_helm:
 	wget https://get.helm.sh/helm-v3.16.3-linux-amd64.tar.gz
 	tar -zxvf helm-v3.16.3-linux-amd64.tar.gz
 	sudo mv linux-amd64/helm /usr/local/bin/helm
+	sudo rm -rf helm-v3.16.3-linux-amd64.tar.gz
 
 get_spark_charts:
 	 helm show values oci://registry-1.docker.io/bitnamicharts/spark > spark-values.yaml
